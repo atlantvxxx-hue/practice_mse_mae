@@ -9,7 +9,7 @@ b = 30
 
 #скорость обучения
 
-learning_rate = 0.2
+learning_rate = 0.1
 
 print("НАЧАЛО ОБУЧЕНИЯ: Угадываем цену яблок")
 
@@ -23,8 +23,8 @@ for iteration in range(5):
     errors = y_pred-y
     print('ошибки {}'.format(errors))
 
-    mse = np.mean(errors ** 2)
-    print('Mse = {}'.format(mse))
+    mae = np.mean(errors)
+    print('Mse = {}'.format(mae))
 
     n = len(x)
 
