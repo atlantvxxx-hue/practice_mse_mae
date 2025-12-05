@@ -23,8 +23,8 @@ for iteration in range(1, 6):
     errors = y_pred-y
     print('ошибки : ', np.round(errors, 1))
 
-    mae = np.mean(errors)
-    print('Mse = ', np.round(mae, 2))
+    mse = np.mean(errors ** 2)
+    print('Mse = ', np.round(mse, 2))
 
     #вычисляем градиенты
     n = len(x)
