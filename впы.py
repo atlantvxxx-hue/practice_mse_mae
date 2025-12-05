@@ -13,12 +13,12 @@ for iteration in range(1,6):
     print('итерация номер {}, показатель w = {:.2f} и b = {:.2f}'.format(iteration, w, b))
 
     y_pred = w * x + b
-    print('предсказание {}'.format(y_pred))
+    print('предсказание : ', np.round(y_pred, 1))
 
     errors = y_pred - y
-    print('ошибка {}'.format(errors))
+    print('ошибки : ', np.round(errors, 1))
 
-    mae = abs(np.mean(errors))
+    mae = f'{abs(np.mean(errors)):.2f}'
     print('mae = {}'.format(mae))
 
     n = len(x)
